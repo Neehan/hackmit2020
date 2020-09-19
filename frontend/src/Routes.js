@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
 import StateManagerContext from "./components/contexts/StateManagerContext";
+import history from "./history";
 
 export default function Routes() {
   const stateManager = useContext(StateManagerContext);
@@ -26,7 +27,7 @@ export default function Routes() {
   };
 
   return (
-    <Router>
+    <Router history={history}>
       <Switch>
         <Route path="/login" component={LoginForm} />
         <Route path="/signUp" component={SignUpForm} />
