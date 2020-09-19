@@ -46,3 +46,7 @@ body {
   display: flex;
   font-weight: 400;
 }
+
+input[type="radio"]{
+  margin: 0 80px 0 10px;
+}

@@ -10,8 +10,10 @@ import "../style/Auth.css";
  */
 function LoginForm() {
   const stateManager = useContext(StateManagerContext);
+
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+
   const [emptyWarning, setEmptyWarning] = useState(false);
 
   let history = useHistory();
@@ -25,7 +27,7 @@ function LoginForm() {
     validateForm() ? setEmptyWarning(false) : setEmptyWarning(true);
     // API call here.
     // Modify state manager here as well.
-    // Finally, redirect to home page if successful login.keyline-all
+    // Finally, redirect to home page if successful login.
   }
 
   return (
@@ -38,7 +40,7 @@ function LoginForm() {
             <div className="form-group">
                 <label>Username</label>
                 <input
-                  type="userName"
+                  type="text"
                   className="form-control"
                   placeholder="Enter username"
                   value={userName}
